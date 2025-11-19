@@ -1,0 +1,115 @@
+[
+  {
+    "boss_name": "bossbully",
+    "boss_adjustment": 25,
+    "follower_adjustment": 15,
+    "followers": [
+      "followerbully"
+    ]
+  },
+  {
+    "boss_name": "bossgluhar",
+    "boss_adjustment": 25,
+    "follower_adjustment": 15,
+    "followers": [
+      "followergluharassault",
+      "followergluharsecurity",
+      "followergluharscout"
+    ]
+  },
+  {
+    "boss_name": "bosskilla",
+    "boss_adjustment": 35,
+    "follower_adjustment": 0,
+    "followers": []
+  },
+  {
+    "boss_name": "bosskojaniy",
+    "boss_adjustment": 25,
+    "follower_adjustment": 15,
+    "followers": [
+      "followerkojaniy"
+    ]
+  },
+  {
+    "boss_name": "bosssanitar",
+    "boss_adjustment": 25,
+    "follower_adjustment": 15,
+    "followers": [
+      "followersanitar"
+    ]
+  },
+  {
+    "boss_name": "bosstagilla",
+    "boss_adjustment": 35,
+    "follower_adjustment": 0,
+    "followers": []
+  },
+  {
+    "boss_name": "bossknight",
+    "boss_adjustment": 30,
+    "follower_adjustment": 25,
+    "followers": [
+        "followerbigpipe",
+        "followerbirdeye"
+    ]
+  },
+  {
+    "boss_name": "bosszryachiy",
+    "boss_adjustment": 35,
+    "follower_adjustment": 20,
+    "followers": [
+      "followerzryachiy"
+    ]
+  },
+  {
+    "boss_name": "bossboar",
+    "boss_adjustment": 35,
+    "follower_adjustment": 15,
+    "followers": [
+      "followerboar",
+      "followerboarclose1",
+      "followerboarclose2",
+      "bossboarsniper"
+    ]
+  },
+  {
+    "boss_name": "bosskolontay",
+    "boss_adjustment": 25,
+    "follower_adjustment": 15,
+    "followers": [
+      "followerkolontayassault",
+      "followerkolontaysecurity"
+    ]
+  },
+  {
+    "boss_name": "bosspartisan",
+    "boss_adjustment": 25,
+    "follower_adjustment": 0,
+    "followers": []
+  },
+  {
+    "boss_name": "bosstagillaagro",
+    "boss_adjustment": 35,
+    "follower_adjustment": 0,
+    "followers": []
+  },
+  {
+    "boss_name": "bosskillaagro",
+    "boss_adjustment": 35,
+    "follower_adjustment": 0,
+    "followers": []
+  },
+  {
+    "boss_name": "pmcbot",
+    "boss_adjustment": 15,
+    "follower_adjustment": 0,
+    "followers": []
+  },
+  {
+    "boss_name": "exusec",
+    "boss_adjustment": 15,
+    "follower_adjustment": 0,
+    "followers": []
+  }
+]
