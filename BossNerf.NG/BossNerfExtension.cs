@@ -5,6 +5,7 @@ using SPTarkov.Server.Core.Helpers;
 using SPTarkov.Server.Core.Models.Utils;
 using SPTarkov.Server.Core.Servers;
 using SPTarkov.Server.Core.Models.Eft.Common.Tables;
+using SPTarkov.Server.Core.Models.Logging;
 using SPTarkov.Server.Core.Services;
 
 namespace BossNerf.NG;
@@ -19,6 +20,7 @@ public class BossNerfExtension(
     public Task OnLoad()
     {
         var tables = databaseServer.GetTables();
+        logger.LogWithColor("[BossNerfNG] The mod has been uploaded successfully.", LogTextColor.Green);
 
         var pathToMod = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
         var bossesConfig = modHelper.GetJsonDataFromFile<BossConfig[]>(pathToMod, "config.json");
@@ -28,7 +30,7 @@ public class BossNerfExtension(
             var boss = tables.Bots.Types[bossConfig.BossName];
             if (boss == null)
             {
-                logger.Error($"Boss {bossConfig.BossName} not found");
+                logger.Error($"[BossNerfNG] Boss {bossConfig.BossName} not found");
                 continue;
             }
 
@@ -39,14 +41,14 @@ public class BossNerfExtension(
                 var follower = tables.Bots.Types[followerName];
                 if (follower == null)
                 {
-                    logger.Error($"Follower {follower} not found");
+                    logger.Error($"[BossNerfNG] Follower {follower} not found");
                     continue;
                 }
                 
                 AdjustedBotHealth(follower, bossConfig.FollowerAdjustment);
             }
         }
-
+        
         return Task.CompletedTask;
     }
 
