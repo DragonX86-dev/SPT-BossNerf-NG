@@ -13,7 +13,6 @@ namespace BossNerf.NG;
 public class BossNerfExtension(
     ModHelper modHelper, 
     DatabaseServer databaseServer,
-    DatabaseService databaseService,
     ISptLogger<BossNerfExtension> logger) : IOnLoad
 {
     public Task OnLoad()
@@ -52,8 +51,9 @@ public class BossNerfExtension(
 
     private void AdjustedBotHealth(BotType bot, int adjustmentValue)
     {
-        var playerHealth = databaseService
-            .GetGlobals()
+        var playerHealth = databaseServer
+            .GetTables()
+            .Globals
             .Configuration
             .Health
             .ProfileHealthSettings
