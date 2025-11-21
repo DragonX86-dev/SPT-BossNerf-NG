@@ -15,17 +15,17 @@
 
     <Target Name="CopyCustomContent" AfterTargets="AfterBuild">
         <Copy SourceFiles="bin\$(Configuration)\net9.0\$(AssemblyName).dll"
-              DestinationFolder="./build/SPT/user/mods/BossNerf.NG/" />
+              DestinationFolder="./build/SPT/user/mods/$(AssemblyName)/" />
         <Copy SourceFiles="bin\$(Configuration)\net9.0\config.json"
-              DestinationFolder="./build/SPT/user/mods/BossNerf.NG/" />
+              DestinationFolder="./build/SPT/user/mods/$(AssemblyName)/" />
     </Target>
 
     <Target Name="ZipOutputPath" AfterTargets="Build">
         <MakeDir Directories="./dist" Condition="!Exists('./dist')" />
-        <Delete Files="./dist/BossNerf.NG-$(Version).zip"
-                Condition="Exists('./dist/BossNerf.NG-$(Version).zip')" />
+        <Delete Files="./dist/$(AssemblyName)-$(Version).zip"
+                Condition="Exists('./dist/$(AssemblyName)-$(Version).zip')" />
         <ZipDirectory SourceDirectory="./build"
-                      DestinationFile="./dist/BossNerf.NG-$(Version).zip" />
+                      DestinationFile="./dist/$(AssemblyName)-$(Version).zip" />
     </Target>
 
     <ItemGroup>
