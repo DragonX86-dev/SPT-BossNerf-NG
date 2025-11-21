@@ -14,7 +14,7 @@ public record ModMetadata : AbstractModMetadata
     public override Range SptVersion { get; init; } = new("~4.0.0");
     public override List<string>? Incompatibilities { get; init; }
     public override Dictionary<string, Range>? ModDependencies { get; init; }
-    public override string? Url { get; init; }
+    public override string? Url { get; init; } = "https://github.com/DragonX86-dev/SPT-BossNerf-NG";
     public override bool? IsBundleMod { get; init; }
     public override string License { get; init; } = "MIT";
 }
